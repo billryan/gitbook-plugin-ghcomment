@@ -1,0 +1,35 @@
+{
+    "name": "gitbook-plugin-ghcomment",
+    "description": "Display GitHub issue comment for GitBook",
+    "version": "0.1.0",
+    "engines": {
+        "gitbook": "*"
+    },
+    "homepage": "https://github.com/billryan/gitbook-plugin-ghcomment",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/billryan/gitbook-plugin-ghcomment.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/billryan/gitbook-plugin-ghcomment/issues"
+    },
+    "gitbook": {
+        "properties": {
+            "owner": {
+                "type": "string",
+                "description": "repo owner"
+            },
+            "repo": {
+                "type": "string",
+                "description": "repo name"
+            }
+        }
+    },
+    "keywords": [
+      "gitbook",
+      "plugin",
+      "comment"
+    ],
+    "author": "Bill Ryan <yuanbin2014@gmail.com>"
+}
