@@ -1,7 +1,7 @@
 {
     "name": "gitbook-plugin-ghcomment",
     "description": "Display GitHub issue comment for GitBook",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "engines": {
         "gitbook": "*"
     },
