@@ -1,59 +1,31 @@
-# gitbook-plugin-tags
+# gitbook-plugin-ghcomment
 
-[![npm](https://img.shields.io/npm/v/gitbook-plugin-tags.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-tags) [![npm](https://img.shields.io/npm/dm/gitbook-plugin-tags.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-tags) [![npm](https://img.shields.io/npm/dt/gitbook-plugin-tags.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-tags)
+[![npm](https://img.shields.io/npm/v/gitbook-plugin-ghcomment.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-ghcomment) [![npm](https://img.shields.io/npm/dm/gitbook-plugin-ghcomment.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-ghcomment) [![npm](https://img.shields.io/npm/dt/gitbook-plugin-ghcomment.svg?style=plastic)](https://npmjs.org/package/gitbook-plugin-ghcomment)
 
-## Tags for GitBook
+## GitHub issue comment for GitBook
 
-Since GitBook do not support this feature native, currently I create this plugin to create tags if `tags: xxx` in markdown page or YAML header.
-
-## Usage
-
-### create `tags.md` file and put it into `SUMMARY.md`
-
-Create a file named `tags.md` at the root dir and put it at the last entry of `SUMMARY.md`.
-A valid `SUMMARY.md` is:
-```
-# Summary
-
-* [Introduction](README.md)
-* [First Chapter](chapter1.md)
-* [Tags](tags.md)
-```
-You can keep the file `tags.md` empty or add header such as
-```
-# Tags
-```
+plugin ghcomment is based on <https://github.com/nimojs/github-comments> for displaying comments with GitHub issue.
 
 ### add plugin in `book.json`
 
 ```
 {
   "plugins": [
-    "tags"
+    "ghcomment"
   ],
+  "ghcomment": {
+    "owner": "billryan",
+    "repo": "blog"
+  }
 }
 ```
 
-### add tags in page
-
-Just drop one line such as
-```
-tags: tag1, tag2, tag3 is here
-```
-tags are separated by comma.
-
-### config placement
-
-Tags will show after the title by default, you can config the placement in the bottom.
+Replace `owner` and `repo` with your own issue repo. For gitbook markdown text, you should set `issue_id` in the frontmatter.
 
 ```
-    "pluginsConfig": {
-        "tags": {
-            "placement": "bottom"
-        }
-    }
+---
+created: 2018-02-24_16-30-16
+issue_id: 16
+title: xxx
+---
 ```
-
-Demo website ==> https://yuanbin.gitbooks.io/test/content/
-
-Enjoy!
