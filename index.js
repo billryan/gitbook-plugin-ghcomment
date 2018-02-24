@@ -21,7 +21,7 @@ module.exports = {
       var _gh_comments_div = '<div class="gc-comments" data-repos="_owner/_repo" data-issues="_issue_id" >'.replace('_owner', _owner).replace('_repo', _repo).replace('_issue_id', _issue_id);
       var _gh_comments_div = _gh_comments_div + '<div class="gc-comments-title">评论</div>';
       var _gh_comments_div = _gh_comments_div + '<div class="gc-comments-info">';
-      var _gh_comments_div = _gh_comments_div + '请访问 <a target="_blank" href="issues_link#new_comment_field">GitHub issue</a> 提交评论';
+      var _gh_comments_div = _gh_comments_div + '请访问 <a target="_blank" href="issues_link">GitHub issue</a> 提交评论';
       var _gh_comments_div = _gh_comments_div + '</div></div>';
       page.content = page.content + _gh_comments_div;
       return page;
